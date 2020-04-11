@@ -1,8 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
-import { increment } from "./actions";
+import { increment, decrement } from "./actions";
 
 function App() {
   const counter = useSelector((state) => state.counter);
@@ -10,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <h1>Counter {counter}</h1>
-      <button onClick={dispatch(increment())}>+</button>
-      <button>-</button>
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
     </div>
   );
 }
