@@ -14,7 +14,7 @@ function App() {
       <button onClick={() => dispatch(increment(5))}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
 
-      {counter > 100 && <h1>YOU WON!!!!</h1>}
+      {counter > 99 && <h1>YOU WON!!!!</h1>}
     </div>
   );
 }
